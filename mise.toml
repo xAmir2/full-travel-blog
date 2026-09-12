@@ -1,0 +1,5 @@
+[tools]
+java = "openjdk-25"
+node = "26"
+pnpm = "12"
+
