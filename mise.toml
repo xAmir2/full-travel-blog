@@ -3,3 +3,20 @@ java = "openjdk-25"
 node = "26"
 pnpm = "12"
 
+[tasks.backend]
+description = "Start Spring Boot backend"
+dir = "apps/backend"
+run = "mvnw.cmd spring-boot:run -Dspring-boot.run.jvmArguments=\"-Dspring.config.additional-location=file:../../env.properties\""
+
+[tasks.frontend]
+description = "Start Vite frontend"
+dir = "apps/frontend"
+run = "pnpm dev"
+
+[tasks.install]
+description = "Install node modules"
+run = "pnpm install"
+
+[tasks.dev]
+description = "Start backend and frontend"
+depends = ["backend", "frontend"]
