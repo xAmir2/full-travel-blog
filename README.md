@@ -27,7 +27,7 @@ tools land on your `PATH`. Run `mise tasks` at any time to list the available de
 ```bash
 cat <<EOF > env.properties
 DB_URL=jdbc:postgresql://localhost:5432/btb
-DB_USERNAME=postgres  
+DB_USERNAME=postgres
 DB_PASSWORD=password
 CLOUDINARY_APIKEY=
 CLOUDINARY_SECRET=
