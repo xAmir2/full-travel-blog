@@ -2,6 +2,7 @@
 java = "openjdk-25"
 node = "26"
 pnpm = "12"
+maven = "3.9"
 
 [tasks.backend]
 description = "Start Spring Boot backend"
@@ -14,7 +15,7 @@ dir = "apps/frontend"
 run = "pnpm dev"
 
 [tasks.install]
-description = "Install node modules"
+description = "Install project dependencies"
 run = "pnpm install"
 
 [tasks.dev]
