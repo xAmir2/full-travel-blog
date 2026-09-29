@@ -1,0 +1,3 @@
+export function CookiesPolicyPage() {
+    return (<></>)
+}

@@ -3,15 +3,15 @@ import {type SyntheticEvent, useEffect, useRef} from "react";
 import {Button, Container, Dropdown, Form, Image, Nav, Navbar,} from "react-bootstrap";
 
 import {
-  BoxArrowRight,
-  Compass,
-  Gear,
-  MoonStars,
-  PersonCircle,
-  Search,
-  Speedometer2,
-  Sun,
-  X,
+    BoxArrowRight,
+    Compass,
+    Gear,
+    MoonStars,
+    PersonCircle,
+    Search,
+    Speedometer2,
+    Sun,
+    X,
 } from "react-bootstrap-icons";
 
 import {Link, Outlet, useLocation, useNavigate, useSearchParams,} from "react-router-dom";
@@ -278,11 +278,13 @@ export function PublicLayout() {
                             <p className="cozy-footer-brand">Explore & Share</p>
 
                             <p className="mb-0">Thoughtful stories from near and far.</p>
-                            <div className="flex flex-column">
-                                <div>
-                                    <Link to="/privacy&cookies"> Privacy & cookies</Link>
-                                </div>
-                                <Link to="/terms-of-service"> Terms of service</Link>
+                            <hr/>
+                            <div className="d-flex flex-column mt-2">
+                                <Link to="/privacy-policy" className="mt-2">Privacy policy </Link>
+
+                                <Link to="/cookies-policy" className="mt-2">Cookies policy</Link>
+
+                                <Link to="/terms-of-service" className="mt-2">Terms of service</Link>
                             </div>
                         </div>
 

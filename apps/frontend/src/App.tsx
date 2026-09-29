@@ -20,8 +20,9 @@ import {SettingsPage} from "./pages/SettingsPage";
 import {SignupPage} from "./pages/SignupPage";
 
 import "./App.css";
-import {PrivacyCookiesPage} from "./pages/PrivacyCookiesPage.tsx";
+import {PrivacyPolicyPage} from "./pages/PrivacyPolicyPage.tsx";
 import {TermsOfServicePage} from "./pages/TermsOfServicePage.tsx";
+import {CookiesPolicyPage} from "./pages/CookiesPolicyPage.tsx";
 
 function App() {
     return (
@@ -33,7 +34,8 @@ function App() {
                     <Route path="posts/:slug" element={<PublicPostPage/>}/>
                     <Route path="login" element={<LoginPage/>}/>
                     <Route path="signup" element={<SignupPage/>}/>
-                    <Route path="privacy&cookies" element={<PrivacyCookiesPage/>}/>
+                    <Route path="privacy-policy" element={<PrivacyPolicyPage/>}/>
+                    <Route path="cookies-policy" element={<CookiesPolicyPage/>}/>
                     <Route path="terms-of-service" element={<TermsOfServicePage/>}/>
 
 
