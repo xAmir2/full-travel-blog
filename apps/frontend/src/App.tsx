@@ -58,36 +58,17 @@ function App() {
                             <Route path="posts/new" element={<AdminPostFormPage/>}/>
                         </Route>
 
-                        <Route
-                            element={
-                                <RequirePermission
-                                    permissions={["POST_READ", "POST_UPDATE"]}
-                                    requireAll
-                                />
-                            }
-                        >
-                            <Route
-                                path="posts/:postId/edit"
-                                element={<AdminPostFormPage/>}
-                            />
+                        <Route element={<RequirePermission permissions={["POST_READ", "POST_UPDATE"]} requireAll/>}>
+                            <Route path="posts/:postId/edit" element={<AdminPostFormPage/>}/>
                         </Route>
 
-                        <Route
-                            element={<RequirePermission permissions={["USER_MANAGE"]}/>}
-                        >
+                        <Route element={<RequirePermission permissions={["USER_MANAGE"]}/>}>
                             <Route path="users" element={<AdminUsersPage/>}/>
                             <Route path="roles" element={<AdminRolesPage/>}/>
                         </Route>
 
-                        <Route
-                            element={
-                                <RequirePermission permissions={["SITE_CONTENT_MANAGE"]}/>
-                            }
-                        >
-                            <Route
-                                path="page-heroes"
-                                element={<AdminPageHeroContentPage/>}
-                            />
+                        <Route element={<RequirePermission permissions={["SITE_CONTENT_MANAGE"]}/>}>
+                            <Route path="page-heroes" element={<AdminPageHeroContentPage/>}/>
                         </Route>
 
                         <Route path="*" element={<Navigate to="/admin" replace/>}/>
